@@ -1,0 +1,131 @@
+{
+  "spdxVersion": "SPDX-2.2",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "dataLicense": "CC0-1.0",
+  "name": "apt2sbom-zippy",
+  "documentNamespace": "https://zippy/.well-known/transparency/sbom",
+  "creationInfo": {
+    "creators": [
+      "Tool: apt2sbom-ubuntu-1.0"
+    ],
+    "created": "Z"
+  },
+  "packages": [
+    {
+      "name": "ubuntu:CORRUPT",
+      "SPDXID": "SPDXRef-ContainerImage-XYZ"
+    },
+    {
+      "name": "ubuntu",
+      "SPDXID": "SPDXRef-OperatingSystem-XYZ",
+      "versionInfo": "23.04",
+      "downloadLocation": "NONE",
+      "copyrightText": "",
+      "primaryPackagePurpose": "OPERATING-SYSTEM"
+    },
+    {
+      "name": "busybox-static",
+      "SPDXID": "SPDXRef-apt2sbom.busybox-static",
+      "versionInfo": "1:1.35.0-4ubuntu1",
+      "filesAnalyzed": false,
+      "supplier": "Organization: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "homepage": "http://www.busybox.net",
+      "sourceInfo": "built package from: busybox 1:1.35.0-4ubuntu1",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/ubuntu/busybox-static@1:1.35.0-4ubuntu1?arch=amd64&distro=ubuntu"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "4318eab88f8a70be982c29dc4ad3b3614fcb1566b8106b82731e6a731e84724a"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "1dee3d238fe2de13353b2e429ab941f5aa9e29a8"
+        },
+        {
+          "algorithm": "MD5",
+          "checksumValue": "f63b662037eed177e1616ed99c6f3513"
+        }
+      ],
+      "downloadLocation": "http://archive.ubuntu.com/ubuntu/pool/main/b/busybox/busybox-static_1.35.0-4ubuntu1_amd64.deb",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "name": "base-files",
+      "SPDXID": "SPDXRef-apt2sbom.base-files",
+      "versionInfo": "12.3ubuntu2",
+      "filesAnalyzed": false,
+      "supplier": "Organization: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "homepage": null,
+      "sourceInfo": "built package from: base-files 12.3ubuntu2",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/ubuntu/base-files@12.3ubuntu2?arch=amd64&distro=ubuntu"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c6a6e0494e371ee622bb3d3f844df530110d7cdad513c2c5bf027eb9106be48a"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "931aaf58467466618993937cba9ac03a547f8081"
+        },
+        {
+          "algorithm": "MD5",
+          "checksumValue": "7fccb699c564d3196774ca4beea7d257"
+        }
+      ],
+      "downloadLocation": "http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_12.3ubuntu2_amd64.deb",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    }
+  ],
+  "documentDescribes": [
+    "SPDXRef-apt2sbom.busybox-static",
+    "SPDXRef-apt2sbom.base-files"
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-apt2sbom.base-files",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-apt2sbom.libc6"
+    },
+    {
+      "spdxElementId": "SPDXRef-apt2sbom.base-files",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-apt2sbom.libcrypt1"
+    },
+    {
+      "spdxElementId": "SPDXRef-apt2sbom.base-files",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-apt2sbom.awk"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-ContainerImage-XYZ",
+      "relationshipType": "DESCRIBES"
+    },
+    {
+      "spdxElementId": "SPDXRef-ContainerImage-XYZ",
+      "relatedSpdxElement": "SPDXRef-OperatingSystem-XYZ",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-OperatingSystem-XYZ",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-apt2sbom.base-files"
+    }
+  ]
+}

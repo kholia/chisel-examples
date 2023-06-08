@@ -1,0 +1,60 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "dataLicense": "CC0-1.0",
+  "name": "ubuntu:CORRUPT",
+  "documentNamespace": "https://zippy/.well-known/transparency/sbom",
+  "creationInfo": {
+    "licenseListVersion": "",
+    "creators": [
+      "Organization: LOLCATS",
+      "Tool: XYZ"
+    ],
+    "created": "0"
+  },
+  "packages": [
+    {
+      "name": "ubuntu:CORRUPT",
+      "SPDXID": "SPDXRef-ContainerImage-XYZ"
+    },
+    {
+      "name": "ubuntu",
+      "SPDXID": "SPDXRef-OperatingSystem-XYZ",
+      "versionInfo": "22.04",
+      "downloadLocation": "NONE",
+      "copyrightText": "",
+      "primaryPackagePurpose": "OPERATING-SYSTEM"
+    },
+    {
+      "name": "tar",
+      "SPDXID": "SPDXRef-XXXPackage-CORRUPT",
+      "downloadLocation": "NONE",
+      "sourceInfo": "built package from: tar 1.34+dfsg-1build3",
+      "copyrightText": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/ubuntu/tar@1.34+dfsg-1build3?arch=amd64bad&distro=ubuntu-corrupt-string"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-ContainerImage-XYZ",
+      "relationshipType": "DESCRIBES"
+    },
+    {
+      "spdxElementId": "SPDXRef-ContainerImage-XYZ",
+      "relatedSpdxElement": "SPDXRef-OperatingSystem-XYZ",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-OperatingSystem-XYZ",
+      "relatedSpdxElement": "SPDXRef-XXXPackage-CORRUPT",
+      "relationshipType": "CONTAINS"
+    }
+  ]
+}
